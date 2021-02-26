@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cross Platform Storytelling Ending</title>
+
+    <!-- import fonts -->
+    <!-- (see css) -->
+
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="assets/style.css"/>
+  </head>
+
+ <body>
+
+<div id="mydiv">
+  <div id="mydivheader">The Library of Babel</div>
+  <div id="by-line">By Jorge Luis Borges</div>
+</div>
+
+<script>
+//Making a DIV element draggagle:
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+
+<div class="bead-1-a"></div>
+<div class="bead-2-a"></div>
+<div class="bead-3-f"></div>
+<div class="bead-4-f"></div>
+<div class="bead-5-f"></div>
+<div class="bead-6-i"></div>
+<div class="bead-7-o"></div>
+<div class="bead-8-s"></div>
+<div class="bead-9-t"></div>
+<div class="bead-10-t"></div>
+<div class="bead-11-t"></div>
+<div class="bead-12-w"></div>
+<div class="bead-13-w"></div>
+
+
+<div class="page-wrap">
+        <div class="row">
+            <div class="column">
+                <h1>
+                    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <blockquote>
+                    <h2>
+                        By this art you may contemplate the variations of the 23 letters... <span>The Anatomy of Melancholy</span>, part 2, sect. II, mem. IV
+                    </h2>
+                    <cite>&mdash; Organizing an Infinity of Information </cite>
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <p class="ampersand">
+                    &amp;
+                </p>
+            </div>
+            <div class="column column1">
+                <h3>
+                    The universe <q>(which others call the Library)</q> is composed of an <q>indefinite</q> and perhaps <q>infinite</q> number of <q>hexagonal galleries</q>, with vast air shafts between, surrounded by very low railings. From any of the hexagons one can see, interminably, the upper and lower floors. The distribution of the galleries is <q>invariable</q>. 
+                    <q>Twenty shelves</q>, five long shelves per side, cover all the sides except two; their height, which is the distance from floor to ceiling, scarcely exceeds that of a normal bookcase. One of the free sides leads to <q>a narrow hallway</q> which opens onto another gallery, identical to the first and to all the rest. To the left and right of the hallway there are two very small closets. In the first, one may sleep standing up; in the other, satisfy one's fecal necessities. Also through here passes <q>a spiral stairway</q>, which <q>sinks abysmally</q> and <q>soars upwards</q> to remote distances. In the hallway there is a mirror which faithfully <q>duplicates all appearances</q>. Men usually infer from this mirror that the Library is not infinite <q>(if it were, why this illusory duplication?)</q>; I prefer to dream that its polished surfaces represent and promise the infinite... Light is provided by some <q>spherical fruit</q> which bear the name of lamps. There are two, transversally placed, in each hexagon. The light they emit is <q>insufficient</q>, <q>incessant</q>. 
+                </h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column column2">
+                <p>
+                    Like all men of the Library, I have traveled in my youth; I have wandered in search of a book, perhaps the catalogue of catalogues; now that my eyes can hardly decipher what I write, I am preparing to die just a few leagues from the hexagon in which I was born. Once I am dead, there will be no lack of pious hands to throw me over the railing; my grave will be the fathomless air; my body will sink endlessly and decay and dissolve in the wind generated by the fall, which is infinite. I say that the Library is unending. The idealists argue that the hexagonal rooms are a necessary form of absolute space or, at least, of our intuition of space. They reason that a triangular or pentagonal room is inconceivable. (The mystics claim that their ecstasy reveals to them a circular chamber containing a great circular book, whose spine is continuous and which follows the complete circle of the walls; but their testimony is suspect; their words, obscure. This cyclical book is God.) Let it suffice now for me to repeat the classic dictum: The Library is a sphere whose exact center is any one of its hexagons and whose circumference is inaccessible.
+                </p>
+            </div>
+            <div class="column">
+                <p>
+                    There are five shelves for each of the hexagon's walls; each shelf contains thirty-five books of uniform format; each book is of four hundred and ten pages; each page, of forty lines, each line, of some eighty letters which are black in color. There are also letters on the spine of each book; these letters do not indicate or prefigure what the pages will say. I know that this incoherence at one time seemed mysterious. Before summarizing the solution (whose discovery, in spite of its tragic projections, is perhaps the capital fact in history) I wish to recall a few axioms.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column column5">
+                <p>
+                    I have just written the word "infinite".' I have not interpolated this adjective out of rhetorical habit; I say that it is not illogical to think that the world is infinite. Those who judge it to be limited postulate that in remote places the corridors and stairways and hexagons can conceivably come to an end - which is absurd. Those who imagine it to be without limit forget that the possible number of books does have such a limit. I venture to suggest this solution to the ancient problem: The Library is unlimited and cyclical. If an eternal traveler were to cross it in any direction, after centuries he would see that the same volumes were repeated in the same disorder (which, thus repeated, would be an order: the Order). My solitude is gladdened by this elegant hope.
+                </p>
+            </div>
+            <div class="column">
+                <a href="http://www.verse-co.com/journal/2016/1/27/design-tip-1-use-a-baseline-grid" target="_blank">Design
+                    tip 1 - use a baseline grid
+                    <span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <polyline fill="none" stroke="#ea1821" stroke-width="32" stroke-linejoin="round"
+                                stroke-linecap="round" points="72,16 184,128 72,240" />
+                        </svg>
+                    </span>
+                </a>
+                <a href="http://thinkingwithtype.com/grid/" target="_blank">Grid - Thinking with type
+                    <span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <polyline fill="none" stroke="#ea1821" stroke-width="32" stroke-linejoin="round"
+                                stroke-linecap="round" points="72,16 184,128 72,240" />
+                        </svg>
+                    </span>
+                </a>
+                <a href="https://www.smashingmagazine.com/2012/12/css-baseline-the-good-the-bad-and-the-ugly/" target="_blank">CSS
+                    Baseline
+                    <span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <polyline fill="none" stroke="#ea1821" stroke-width="32" stroke-linejoin="round"
+                                stroke-linecap="round" points="72,16 184,128 72,240" />
+                        </svg>
+                    </span>
+                </a>
+                <a href="http://jasonsantamaria.com/articles/baseline-grids-on-the-web" target="_blank">Baseline grids
+                    on the web
+                    <span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <polyline fill="none" stroke="#ea1821" stroke-width="32" stroke-linejoin="round"
+                                stroke-linecap="round" points="72,16 184,128 72,240" />
+                        </svg>
+                    </span>
+                </a>
+                <a href="https://medium.com/by-filament/how-to-use-a-design-grid-587f40cc9a0d" target="_blank">How to
+                    use a design grid
+                    <span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <polyline fill="none" stroke="#ea1821" stroke-width="32" stroke-linejoin="round"
+                                stroke-linecap="round" points="72,16 184,128 72,240" />
+                        </svg>
+                    </span>
+                </a>
+                <a href="https://pilot.co/blog/implementing-baseline-rhythm-in-css/" target="_blank">Implementing
+                    baseline grid
+                    <span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <polyline fill="none" stroke="#ea1821" stroke-width="32" stroke-linejoin="round"
+                                stroke-linecap="round" points="72,16 184,128 72,240" />
+                        </svg>
+                    </span>
+                </a>
+                <a href="https://medium.com/@razvanonofrei/aligning-type-to-baseline-the-right-way-using-sass-e258fce47a9b"
+                    target="_blank">Align type to baseline
+                    <span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <polyline fill="none" stroke="#ea1821" stroke-width="32" stroke-linejoin="round"
+                                stroke-linecap="round" points="72,16 184,128 72,240" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+ </body>
+ </html>
+ 
