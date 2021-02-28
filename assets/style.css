@@ -105,15 +105,6 @@ option {
 }
 
 /**
- * Set a color on active state 
- */
-
-a:active,
-button:active {
-  color: inherit;
-}
-
-/**
  * Prevent chrome autofill style  
  */
 
@@ -165,22 +156,12 @@ img {
 }
 
 /**
- * If a SVG doesn't have fill, it'll give one
- */
-
-svg {
-  fill: currentColor;
-}
-
-/**
  * Collapse border spacing
  */
 
 table {
   border-collapse: collapse;
 }
-
-
 
 /* ==========================================================================
    SITE SETTINGS
@@ -227,40 +208,6 @@ html {
     font-size: var(--base-font-size);
 }
 
-/* We need the cap height, below are a few options that I use to get cap height ratio:
-
- https://codepen.io/sebdesign/pen/EKmbGL?editors=1111 
- This tool calculates cap height instantly, but is error prone. Below is another tool, always check in both
- and see which one is right for the particular typeface
-
- https://jamonserrano.github.io/plumber-sass/measure/
- This tool doesn't calculate cap height, but with a simple formula you can get it easily. I find it the most accurate of all I tried online.
- Get the baseline ratio as shown on the site. Then just use this. 1 - (2 x baseline-ratio) = cap height
-
-Here is the formula for calculating the offset. Only prerequisite is the cap height.
-
- --line-height: calc(var(--baseline) * var(--baseline-multi));
- --baseline-offset: calc((var(--line-height) - var(--cap-height) * var(--font-size)) / 2);
-
- Then we need to use the offset as padding-top
-  padding-top: var(--baseline-offset);
-
- Also, this technique assumes we are using single direction margins. Honestly, I think everyone should be working like this, much easier to code and maintain this way. We reset margins on all elements to zero and use margin bottom only.
-
- This snippet compensates for baseline offset:
-  margin-bottom: calc(var(--baseline-offset) * -1);
-
-  This is how you use bottom margin to space elements:
-   margin-bottom: calc(2 * var(--base-line-height) - var(--baseline-offset));
-   margin-bottom: calc(3 * var(--base-line-height) - var(--baseline-offset));
-   margin-bottom: calc(8 * var(--base-line-height) - var(--baseline-offset));
-   etc, etc....
-
-   And here are the main rules: 
-   Line heights must be multiples of the baseline. Font sizes can be anything you want. I don't like modular scales, they are too restricting IMO and I always end up using different sizes then the ones offered by the scale. I am more of an eyeballer :)
-
-*/
-
 h1,
 h2,
 h3,
@@ -268,7 +215,6 @@ h4,
 h5,
 h6,
 p,
-a,
 cite {
     --line-height: calc(var(--baseline) * var(--baseline-multi));
     --baseline-offset: calc((var(--line-height) - var(--cap-height) * var(--font-size)) / 2);
@@ -344,53 +290,6 @@ p.ampersand {
     margin-bottom: calc(3 * var(--base-line-height) - var(--baseline-offset));
 }
 
-a {
-    --cap-height: 0.826;
-    --font-size: 24px;
-    --baseline-multi: 2;
-    font-family: var(--font-family-secondary);
-    font-weight: var(--font-weight-400);
-    margin-bottom: calc(3 * var(--base-line-height) - var(--baseline-offset));
-    display: inline-block;
-    text-decoration: none;
-    color: #023AFF;
-    position: relative;
-    z-index: 1;
-}
-
-a::before {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #023AFF;
-    transform: scaleX(0.2);
-    transform-origin: bottom left;
-    transition: transform .5s ease-out;
-}
-
-a:hover::before {
-    transform: scaleX(0.95)
-}
-
-a span {
-    display: inline-block;
-    vertical-align: bottom;
-    position: relative;
-    top: 9px;
-    transform: translateX(14px);
-    opacity: 0;
-    transition: all .3s ease-out .3s;
-    width: 0.8rem
-}
-
-a:hover span {
-    transform: translateX(3px);
-    opacity: 1;
-}
-
 cite {
     display: block;
     --cap-height: 0.752;
@@ -453,7 +352,7 @@ body::after {
 }
 
 .row:not(:nth-of-type(1)) {
-    padding: var(--spacing-8) calc(var(--spacing-8) * 2);
+    padding: var(--spacing-8) calc(var(--spacing-10) * 2);
 }
 
 @media screen and (max-width: 1366px) {
@@ -527,25 +426,8 @@ body::after {
     background-size: 100% var(--baseline);
 }
 
-
 .row .column {
     column-gap: 40px;
-}
-
-.column1{
-
-}
-
-.column2{
-  margin-right: 5em;
-}
-
-.column3{
-
-}
-
-.column5{
-  margin-right: 12em;
 }
 
 .row:nth-of-type(1) .column {
@@ -568,17 +450,9 @@ body::after {
     margin-right: auto
 }
 
-.row:nth-of-type(5) .column:nth-of-type(2) {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: var(--spacing-2)
-}
-
 @media screen and (max-width: 1366px) {
 
-    .row:nth-of-type(4) .column,
-    .row:nth-of-type(5) .column {
+    .row:nth-of-type(4) .column {
         max-width: 500px;
     }
 }
@@ -595,19 +469,16 @@ body::after {
 
 @media screen and (max-width: 1024px) {
 
-    .row:nth-of-type(4),
-    .row:nth-of-type(5) {
+    .row:nth-of-type(4) {
         flex-direction: column;
         align-items: center;
     }
 
-    .row:nth-of-type(4) .column:nth-of-type(1),
-    .row:nth-of-type(5) .column:nth-of-type(1) {
+    .row:nth-of-type(4) .column:nth-of-type(1) {
         margin-bottom: var(--spacing-4)
     }
 
-    .row:nth-of-type(4) .column,
-    .row:nth-of-type(5) .column {
+    .row:nth-of-type(4) .column, {
         max-width: 600px;
     }
 }
@@ -630,15 +501,6 @@ body::after {
         --font-size: 30px;
         --baseline-multi: 5
     }
-
-    a {
-        --font-size: 21px
-    }
-
-    a span {
-        top: 11px
-    }
-
 }
 
 @media screen and (max-width: 480px) {
@@ -657,14 +519,6 @@ body::after {
     h2 {
         letter-spacing: 6px;
         margin-left: -6px
-    }
-
-    a {
-        font-size: 16px
-    }
-
-    a span {
-        top: 13px
     }
 }
 
