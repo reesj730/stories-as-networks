@@ -544,148 +544,299 @@ body::after {
 
 /* beads */
 
-.bead-1-a{
+.beads{
    position: absolute;
-   width: 2.8vh;
-   height: 2.8vh;
-   left: 100px;
-   top: 150px;
+   width: 20px;
+   height: 20px;
    border-radius: 50%;
    z-index:1;
    background: #023AFF; 
+}
+
+.bead-1-a{
+   left: 100px;
+   top: 150px;
 }
 
 .bead-2-a{
-   position: absolute;
-   width: 2.8vh;
-   height: 2.8vh;
    left: 118px;
    top: 110px;
-   border-radius: 50%;
-   z-index:1;
-   background: #023AFF; 
 }
 
 .bead-3-f{
-   position: absolute;
-   width: 2.8vh;
-   height: 2.8vh;
    left: 700px;
    top: 113px;
-   border-radius: 50%;
-   z-index:1;
-   background: #023AFF; 
 }
 
 .bead-4-f{
-   position: absolute;
-   width: 2.8vh;
-   height: 2.8vh;
    left: 755px;
    top: 113px;
-   border-radius: 50%;
-   z-index:1;
-   background: #023AFF; 
 }
 
 .bead-5-f{
-   position: absolute;
-   width: 2.8vh;
-   height: 2.8vh;
    left: 705px;
    top: 170px;
-   border-radius: 50%;
-   z-index:1;
-   background: #023AFF; 
 }
 
 .bead-6-i{
-   position: absolute;
-   width: 2.8vh;
-   height: 2.8vh;
    left: 230px;
    top: 250px;
-   border-radius: 50%;
-   z-index:1;
-   background: #023AFF; 
 }
 
 .bead-7-o{
-   position: absolute;
-   width: 2.8vh;
-   height: 2.8vh;
    left: 140px;
    top: 330px;
-   border-radius: 50%;
-   z-index:1;
-   background: #023AFF; 
 }
 
 .bead-8-s{
-   position: absolute;
-   width: 2.8vh;
-   height: 2.8vh;
    left: 595px;
    top: 330px;
-   border-radius: 50%;
-   z-index:1;
-   background: #023AFF; 
 }
 
 .bead-9-t{
-   position: absolute;
-   width: 2.8vh;
-   height: 2.8vh;
    left: 700px;
    top: 350px;
-   border-radius: 50%;
-   z-index:1;
-   background: #023AFF; 
 }
 
 .bead-10-t{
-   position: absolute;
-   width: 2.8vh;
-   height: 2.8vh;
    left: 750px;
    top: 350px;
-   border-radius: 50%;
-   z-index:1;
-   background: #023AFF; 
 }
 
 .bead-11-t{
-   position: absolute;
-   width: 2.8vh;
-   height: 2.8vh;
    left: 710px;
-   top: 385px;
-   border-radius: 50%;
-   z-index:1;
-   background: #023AFF; 
+   top: 385px; 
 }
 
 .bead-12-w{
-   position: absolute;
-   width: 2.8vh;
-   height: 2.8vh;
    left: 305px;
    top: 435px;
-   border-radius: 50%;
-   z-index:1;
-   background: #023AFF; 
 }
 
 .bead-13-w{
-   position: absolute;
-   width: 2.8vh;
-   height: 2.8vh;
    left: 245px;
-   top: 500px;
-   border-radius: 50%;
-   z-index:1;
-   background: #023AFF; 
+   top: 500px; 
 }
+
+.bead-14-l{
+   left: 540px;
+   top: 250px; 
+}
+
+
+@media screen and (max-width: 768px) {
+  .beads{
+    width: 15px;
+    height: 15px;
+  }
+
+  .bead-1-a{
+   left: 29px;
+   top: 152px;
+  }
+
+  .bead-2-a{
+   left: 43px;
+   top: 121px;
+  }
+
+  .bead-3-f{
+   left: 121px;
+   top: 232px;
+  }
+
+  .bead-4-f{
+   left: 167px;
+   top: 232px;
+  }
+
+  .bead-5-f{
+   left: 125px;
+   top: 278px;
+  }
+
+  .bead-6-i{
+   left: 24px;
+   top: 365px;
+  }
+
+  .bead-7-o{
+   left: 258px;
+   top: 470px;
+  }
+
+  .bead-8-s{
+   left: 245px;
+   top: 570px;
+  }
+
+  .bead-9-t{
+   left: 385px;
+   top: 572px;
+  }
+
+  .bead-10-t{
+   left: 342px;
+   top: 572px;
+  }
+
+  .bead-11-t{
+   left: 350px;
+   top: 602px; 
+  }
+
+  .bead-12-w{
+   left: 293px;
+   top: 715px;
+  }
+
+  .bead-13-w{
+   left: 240px;
+   top: 665px; 
+  }
+
+  .bead-14-l{
+   left: 305px;
+   top: 363px; 
+  }
+}
+
+/* buttons */
+
+span:hover{
+  color: lightblue;
+  border: #ddd solid 1px;
+  background: black;
+}
+
+.beads:after {
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  transition: all ease 0.5s;
+  content: "";
+  background-color: blue;
+}
+
+.beads:hover:after {
+  width: 100%;
+  transition: all ease 0.5s;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.next, .up {
+  background-color: black;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+/*  animated beads */
+.ball.a {
+  top: 50%;
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: #023AFF;
+  border: 3px solid #000;
+  border-radius: 50%;
+  animation: floating 4s linear 0s infinite alternate;
+}
+
+.ball.b {
+  top: 80%;
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: #023AFF;
+  border: 3px solid #000;
+  border-radius: 50%;
+  animation: floating 2s linear 0s infinite alternate;
+}
+
+.ball.c{
+  top: 20%;
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: #023AFF;
+  border: 3px solid #000;
+  border-radius: 50%;
+  animation: floating 3s linear 0s infinite alternate;
+}
+
+.ball.d{
+  top: 40%;
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: #023AFF;
+  border: 3px solid #000;
+  border-radius: 50%;
+  animation: floating 5s linear 0s infinite alternate;
+}
+
+.ball.e{
+  top: 10%;
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: #023AFF;
+  border: 3px solid #000;
+  border-radius: 50%;
+  animation: floating 7s linear 0s infinite alternate;
+}
+
+.ball.f{
+  top: 60%;
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: #023AFF;
+  border: 3px solid #000;
+  border-radius: 50%;
+  animation: floating 6s linear 0s infinite alternate;
+}
+
+@keyframes floating {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
