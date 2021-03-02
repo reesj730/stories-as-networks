@@ -1,12 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500|Inknut+Antiqua:400,500,600,700,800|Alegreya:800,900');
 
-/* ==== Wipe CSS ==== */
-/**
- * 1. Always reset this sucks.
- * 2. Inherit from default setting
- */
-
 * {
   margin: 0; /* 1 */
   padding: 0; /* 1 */
@@ -30,7 +24,7 @@ html {
 
 /**
  * 1. Set default font styles
- * 2. Beautiful fonts again
+ * 2. font setting again
  * 3. Prevent horizontal scroll
  */
 
