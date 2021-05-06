@@ -34,10 +34,6 @@ body {
   overflow-x: hidden; /* 3 */
 }
 
-/**
- * All Headings look the same
- */
-
 h1,
 h2,
 h3,
@@ -59,18 +55,10 @@ a {
   background-color: transparent; /* 3 */
 }
 
-/**
- * No bullets anymore
- */
-
 ol,
 ul {
   list-style: none;
 }
-
-/**
- * Remove all default styles and all elements look the same 
- */
 
 button,
 input,
@@ -90,17 +78,9 @@ textarea {
   vertical-align: top;
 }
 
-/**
- * Avoid no background on Edge and IE 
- */
-
 option {
   background-color: inherit;
 }
-
-/**
- * Prevent chrome autofill style  
- */
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -110,26 +90,14 @@ input:-webkit-autofill:active {
   -webkit-transition-delay: 9999s;
 }
 
-/**
- * You should define size for textarea
- */
-
 textarea {
   resize: none;
 }
-
-/**
- * Pointer cursor for buttons
- */
 
 input[type="button"],
 button {
   cursor: pointer;
 }
-
-/**
- * Pointer default for disabled buttons
- */
 
 button[disabled],
 html input[disabled] {
@@ -149,17 +117,10 @@ img {
   border-style: none; /* 3 */
 }
 
-/**
- * Collapse border spacing
- */
-
 table {
   border-collapse: collapse;
 }
 
-/* ==========================================================================
-   SITE SETTINGS
-   ========================================================================== */
 
 :root {
 
@@ -176,9 +137,7 @@ table {
 
 
     --baseline: calc(12 * 1px);
-    /* This is our baseline */
     --base-line-height: calc(var(--baseline) * 2);
-    /* Base line height is a multiple of the baseline */
     --base-font-size: 1rem;
 
     /* ==== Spacing based on baseline ==== */
